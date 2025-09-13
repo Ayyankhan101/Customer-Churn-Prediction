@@ -37,7 +37,7 @@ st.markdown(
 @st.cache_resource(show_spinner=False)
 def load_model():
     try:
-        return joblib.load("churn_model.pkl")
+        return joblib.load("churn_model.pkl.xz")
     except FileNotFoundError:
         st.error("Model artefact `churn_model.pkl` not found. Train it first.")
         st.stop()
